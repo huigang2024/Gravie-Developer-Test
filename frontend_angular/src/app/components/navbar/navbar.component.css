@@ -1,0 +1,29 @@
+.navbar {
+    background-color: #333;
+    padding: 1rem;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .navbar-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-link:hover {
+    color: #00bcd4;
+  }
+
+  .navbar-user {
+    color: #fff;
+    font-size: 1rem;
+    margin-left: auto;
+    padding-left: 1rem;
+  }

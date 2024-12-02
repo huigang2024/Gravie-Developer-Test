@@ -1,0 +1,15 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Add some base styles */
+  body {
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  h2 {
+    color: #2c3e50;
+  }

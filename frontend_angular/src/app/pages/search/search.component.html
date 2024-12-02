@@ -1,0 +1,26 @@
+<div>
+    <h2>Search Games</h2>
+    <input type="text" [(ngModel)]="query" placeholder="Search...">
+    <button (click)="search(1)">Search</button>
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>    
+    <div *ngIf="games.length">    
+    <h3>Results:</h3>
+      <div class="games-grid">
+        <div *ngFor="let game of games">
+          <h3>{{ game.name }}</h3>
+          <img [src]="game.image?.icon_url" alt="{{ game.name }}">
+          <p>{{ game.deck }}</p>
+          <button (click)="rentGame(game)" [disabled]="isGameRented(game.id)">Rent Game</button>
+        </div>
+      </div>
+
+      <div class="pagination">
+        <button (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+        <span>Page {{ currentPage }} of {{ totalPages }}</span>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+      </div>
+
+    </div>
+</div>

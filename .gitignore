@@ -1,0 +1,7 @@
+# Ignore node modules
+node_modules/
+.env
+.venv
+.vscode
+.angular
+package-lock.json

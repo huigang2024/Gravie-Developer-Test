@@ -1,0 +1,13 @@
+<div>
+    <h2>Rented Games</h2>
+    <div *ngIf="rentedGames.length">
+      <ul>
+        <li *ngFor="let game of rentedGames">
+          {{ game.name }}
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="!rentedGames.length">
+      <p>No games rented yet.</p>
+    </div>
+  </div>
