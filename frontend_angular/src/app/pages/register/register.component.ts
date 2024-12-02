@@ -32,7 +32,6 @@ export class RegisterComponent {
       this.router.navigate(['/login']);
     } catch(error) {
       this.errorMessage = 'Registration failed! Please try again.';
-      // alert('Registration failed!');
     }
   }
 }

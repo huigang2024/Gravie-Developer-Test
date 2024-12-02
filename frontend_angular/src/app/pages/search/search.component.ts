@@ -33,7 +33,7 @@ export class SearchComponent {
         this.rentedGames = response;
       }
     } catch (error) {
-      alert('Failed to load rented games! Please try again later.');
+      this.errorMessage = 'Something Wrong on init account, please refresh!';
     }
   }
 
@@ -70,9 +70,8 @@ export class SearchComponent {
     try {
       const response: any = await firstValueFrom(this.http.post(`${environment.apiUrl}/rent`, { game_id: gameId }, { headers }));
       this.rentedGames.push(gameId)
-      alert('Game rented successfully!');
     } catch (error) {
-      alert('Failed to rent game! Please try again later.');
+      this.errorMessage = 'Failed to rent game! Please try again later.';
     }
   }  
 

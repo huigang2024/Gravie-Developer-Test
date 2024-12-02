@@ -15,6 +15,8 @@ import { environment } from '../../../environments/environment';
 
 export class CheckoutComponent {
   rentedGames: any[] = [];
+  errorMessage: string = '';
+
 
   constructor(private http: HttpClient) {
     this.loadRentedGames();
@@ -29,7 +31,7 @@ export class CheckoutComponent {
         this.rentedGames = response;
       }
     } catch (error) {
-      alert('Failed to load rented games! Please try again later.');
+      this.errorMessage = 'Failed to load rented game! Please try again later.';
     }
   }
 }

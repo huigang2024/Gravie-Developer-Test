@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 from flask_cors import CORS
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager, create_access_token, jwt_required, get_jwt_identity
+from waitress import serve
 
 # Load environment variables
 load_dotenv()
@@ -114,4 +115,4 @@ def home():
     return "Welcome to the Game Rental Application!"
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+    serve(app, host='0.0.0.0', port=5000)
